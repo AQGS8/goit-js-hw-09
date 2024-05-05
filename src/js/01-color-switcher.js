@@ -3,7 +3,7 @@ function getRandomHexColor() {
 }
 
 
-function zmianaKoloruTla() {
-    document.body.style.backgroundColor = getRandomHexColor();
-    setTimeout(zmianaKoloruTla, 1000);
-}
+// function zmianaKoloruTla() {
+//     document.body.style.backgroundColor = getRandomHexColor();
+//     setTimeout(zmianaKoloruTla, 1000);
+// }
