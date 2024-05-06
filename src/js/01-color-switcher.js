@@ -6,9 +6,6 @@ const startBtn = document.querySelector('[data-start]');
 
 const stopBtn = document.querySelector('[data-stop]');
 
-
-// document.body.style.backgroundColor = getRandomHexColor();
-
 function zmianaKoloruTla() {
     document.body.style.backgroundColor = getRandomHexColor();
     setTimeout(zmianaKoloruTla, 1000);
@@ -30,9 +27,10 @@ stopBtn.addEventListener('click', function(){
 
 
 // let timeoutId;
-// timeoutId = setTimeout(changeBackgroundColor, 1000);
+// timeoutId = setTimeout(zmianaKoloruTla, 1000);
 //   return timeoutId;
 // clearTimeout(timeoutId);
+
 
 
 let t;
