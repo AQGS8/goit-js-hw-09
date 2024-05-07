@@ -6,10 +6,14 @@ const startBtn = document.querySelector('[data-start]');
 
 const stopBtn = document.querySelector('[data-stop]');
 
+let  zmianaKoloruTlaOFF;
+
 function zmianaKoloruTla() {
     document.body.style.backgroundColor = getRandomHexColor();
-    setTimeout(zmianaKoloruTla, 1000);
+    zmianaKoloruTlaOFF =  setTimeout(zmianaKoloruTla, 1000);
+    return zmianaKoloruTlaOFF;
 }
+
 
 startBtn.addEventListener('click', function(){
     console.log("START")
@@ -22,36 +26,5 @@ stopBtn.addEventListener('click', function(){
     console.log("STOP")
     this.disabled = true;
     startBtn.disabled = false;
-    clearTimeout(zmianaKoloruTla());
+    clearTimeout(zmianaKoloruTlaOFF);
 })
-
-
-// let timeoutId;
-// timeoutId = setTimeout(zmianaKoloruTla, 1000);
-//   return timeoutId;
-// clearTimeout(timeoutId);
-
-
-
-let t;
- 
-function color() {
-    if (document.getElementById('btn'
-    ).style.color == 'blue') {
-        document.getElementById('btn')
-            .style.color = 'green';
-    } else {
-        document.getElementById('btn')
-            .style.color = 'blue';
-    }
-
-}
-
-function fun() {
-    t = setTimeout(color, 2000);
-
-}
-
-function stop() {
-    clearTimeout(t);
-}
